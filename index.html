@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Server</title>
     <style>
-        /* Your CSS goes here */
+        body {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(to bottom, #dff6e3, #ffffff);
+            color: #1f2937;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #2f855a;
+            margin-bottom: 60px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 10px;
+            background: #2f855a;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #276749;
+        }
     </style>
 </head>
+
 <body>
-    <!-- Your HTML goes here -->
-    
+    <div class="card">
+        <h1>Welcome to My First Server</h1>
+        <p>
+            This is a simple webpage hosted with a Node.js server. Created for my Web Production 2 class.
+        </p>
+
+        <button onclick="changeMessage()">Click Me</button>
+        <p id="message">Spring is here 🌿</p>
+    </div>
+
     <script>
-        // Your javascript code (optional)
+        function changeMessage() {
+            document.getElementById("message").textContent =
+                "The server is working and the page is interactive!";
+        }
     </script>
 </body>
+
 </html>
